@@ -336,12 +336,18 @@ def game(difficulty, name, score):
             # incremente. So I choose to display the new score only on the next game.
             button("PLAY AGAIN", 37.5, 410, 375, 40, RED_CHERRY, BROWN_TO_ORANGE)
             if (37.5 + 375) > mouse[0] > 37.5 and (410 + 40) > mouse[1] > 410 and click[0] == 1:
-                actual_score = int(actual_score) - 1
+                if difficulty == "hard":
+                    actual_score = int(actual_score) + 3
+                else:
+                    actual_score = int(actual_score) + 1
                 game(actual_difficulty, player, actual_score)
 
             button("SAVE SCORE AND MENU", 37.5, 480, 375, 40, RED_CHERRY, BROWN_TO_ORANGE)
             if (37.5 + 375) > mouse[0] > 37.5 and (480 + 40) > mouse[1] > 480 and click[0] == 1:
-                actual_score = int(actual_score) - 1
+                if difficuty == "hard":
+                    actual_score = int(actual_score) + 3
+                else:
+                    actual_score = int(actual_score) + 1
                 save_score(player, actual_score)
                 main()
 
