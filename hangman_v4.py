@@ -344,7 +344,7 @@ def game(difficulty, name, score):
 
             button("SAVE SCORE AND MENU", 37.5, 480, 375, 40, RED_CHERRY, BROWN_TO_ORANGE)
             if (37.5 + 375) > mouse[0] > 37.5 and (480 + 40) > mouse[1] > 480 and click[0] == 1:
-                if difficuty == "hard":
+                if difficulty == "hard":
                     actual_score = int(actual_score) + 3
                 else:
                     actual_score = int(actual_score) + 1
