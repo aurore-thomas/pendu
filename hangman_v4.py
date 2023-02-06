@@ -349,7 +349,7 @@ def game(difficulty, name, score):
                 else:
                     actual_score = int(actual_score) + 1
                 save_score(player, actual_score)
-                main()
+                scores()
 
         # if defeat :
         if status == 6 and done == True:
